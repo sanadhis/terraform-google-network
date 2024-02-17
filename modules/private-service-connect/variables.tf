@@ -19,6 +19,12 @@ variable "project_id" {
   type        = string
 }
 
+variable "project_region" {
+  description = "Project Region for Private Service Connect."
+  type        = string
+  default     = "us-central1"
+}
+
 variable "network_self_link" {
   description = "Network self link for Private Service Connect."
   type        = string

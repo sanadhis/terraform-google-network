@@ -48,15 +48,16 @@ If you have a firewall rule blocking egress traffic, you will need to configure 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| dns\_code | Code to identify DNS resources in the form of `{dns_code}-{dns_type}` | `string` | `"dz"` | no |
-| forwarding\_rule\_name | Forwarding rule resource name. The forwarding rule name for PSC Google APIs must be an 1-20 characters string with lowercase letters and numbers and must start with a letter. Defaults to `globalrule` | `string` | `"globalrule"` | no |
-| forwarding\_rule\_target | Target resource to receive the matched traffic. Only `all-apis` and `vpc-sc` are valid. | `string` | n/a | yes |
-| network\_self\_link | Network self link for Private Service Connect. | `string` | n/a | yes |
-| private\_service\_connect\_ip | The internal IP to be used for the private service connect. | `string` | n/a | yes |
-| private\_service\_connect\_name | Private Service Connect endpoint name. Defaults to `global-psconnect-ip` | `string` | `"global-psconnect-ip"` | no |
-| project\_id | Project ID for Private Service Connect. | `string` | n/a | yes |
+| Name                            | Description                                                                                                                                                                                             | Type     | Default                 | Required |
+|---------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|-------------------------|:--------:|
+| dns\_code                       | Code to identify DNS resources in the form of `{dns_code}-{dns_type}`                                                                                                                                   | `string` | `"dz"`                  |    no    |
+| forwarding\_rule\_name          | Forwarding rule resource name. The forwarding rule name for PSC Google APIs must be an 1-20 characters string with lowercase letters and numbers and must start with a letter. Defaults to `globalrule` | `string` | `"globalrule"`          |    no    |
+| forwarding\_rule\_target        | Target resource to receive the matched traffic. Only `all-apis` and `vpc-sc` are valid.                                                                                                                 | `string` | n/a                     |   yes    |
+| network\_self\_link             | Network self link for Private Service Connect.                                                                                                                                                          | `string` | n/a                     |   yes    |
+| private\_service\_connect\_ip   | The internal IP to be used for the private service connect.                                                                                                                                             | `string` | n/a                     |   yes    |
+| private\_service\_connect\_name | Private Service Connect endpoint name. Defaults to `global-psconnect-ip`                                                                                                                                | `string` | `"global-psconnect-ip"` |    no    |
+| project\_id                     | Project ID for Private Service Connect.                                                                                                                                                                 | `string` | n/a                     |   yes    |
+| project\_region                 | Project Region for Private Service Connect.                                                                                                                                                             | `string` | "us-central1"           |   yes    |
 
 ## Outputs
 

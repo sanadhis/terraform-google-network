@@ -38,4 +38,7 @@ resource "google_compute_global_forwarding_rule" "forwarding_rule_private_servic
   network               = var.network_self_link
   ip_address            = google_compute_global_address.private_service_connect.id
   load_balancing_scheme = ""
+  service_directory_registrations {
+    service_directory_region = var.project_region
+  }
 }
